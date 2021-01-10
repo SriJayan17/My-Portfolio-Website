@@ -116,10 +116,14 @@
             background: #ff5f1fda;
             transition: transform 0.5s ease-in-out;
             z-index: 2;
+            overflow: hidden;
             li{
                 margin: 2rem auto;
                 &:first-child{
                     margin-top: 0;
+                }
+                a{
+                    color: #fff;
                 }
             }
         }
