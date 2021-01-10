@@ -287,15 +287,19 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background: #ff5f1fda;
+    background: #ff5f1fe5;
     -webkit-transition: -webkit-transform 0.5s ease-in-out;
     transition: -webkit-transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
     z-index: 2;
+    overflow: hidden;
   }
   #main-navbar ul li {
     margin: 2rem auto;
+  }
+  #main-navbar ul li a {
+    color: #fff;
   }
   #main-navbar ul li:first-child {
     margin-top: 0;

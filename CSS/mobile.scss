@@ -113,7 +113,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: #ff5f1fda;
+            background: #ff5f1fe5;
             transition: transform 0.5s ease-in-out;
             z-index: 2;
             overflow: hidden;
@@ -121,9 +121,9 @@
                 margin: 2rem auto;
 
                 a{
-                    color: #fff !important;
+                    color: #fff;
                 }
-                
+
                 &:first-child{
                     margin-top: 0;
                 }
