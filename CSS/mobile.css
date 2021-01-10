@@ -287,7 +287,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background: #ff5f1faf;
+    background: #ff5f1fda;
     -webkit-transition: -webkit-transform 0.5s ease-in-out;
     transition: -webkit-transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out;
