@@ -36,12 +36,12 @@
 }
 
 .btn-primary:hover {
-  background: #FF5F1F;
+  background: #ff5f1f;
   color: #fff;
 }
 
 .btn-secondary {
-  background: #FF5F1F;
+  background: #ff5f1f;
   color: #fff;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .btn-light:hover {
-  background: #FF5F1F;
+  background: #ff5f1f;
   color: #fff;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .btn-dark:hover {
-  background: #FF5F1F;
+  background: #ff5f1f;
   color: #fff;
 }
 
@@ -85,7 +85,7 @@
   height: 0.25rem;
   width: 4rem;
   margin: auto;
-  background: #FF5F1F;
+  background: #ff5f1f;
   margin-bottom: 1rem;
 }
 
@@ -155,7 +155,7 @@
 }
 
 .bg-secondary {
-  background: #FF5F1F;
+  background: #ff5f1f;
   color: #fff;
 }
 
@@ -177,12 +177,14 @@
 }
 
 body {
-  font-family: lora,serif;
+  font-family: lora, serif;
   line-height: 1.6;
   background: #f4f4f4;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin-bottom: 1rem;
   line-height: 1.2;
 }
@@ -255,8 +257,8 @@ img {
   padding: 0.75rem 1.5rem;
   margin-right: 1.5rem;
   font-weight: bold;
-  -webkit-transition: background-color 0.3s ease-in, color 0.3s ease-in;
-  transition: background-color 0.3s ease-in, color 0.3s ease-in;
+  -webkit-transition: background-color 0.3s ease-in, color 0.3s ease-in;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
 #main-navbar ul li a:hover {
@@ -271,7 +273,7 @@ img {
 }
 
 #main-header::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -369,14 +371,14 @@ img {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1.5rem;
+  grid-gap: 1rem;
 }
 
 #about-a .about-info .bio-image {
   -ms-grid-column-align: center;
       justify-self: center;
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
 }
 
 #about-a .about-info .bio {
@@ -392,7 +394,7 @@ img {
 }
 
 #about-a .about-info .aw-1 i, #about-a .about-info .aw-2 i {
-  color: #FF5F1F;
+  color: #ff5f1f;
   margin-bottom: 1rem;
 }
 
@@ -413,7 +415,7 @@ img {
 }
 
 #about-b .time-line li::after {
-  content: '';
+  content: "";
   position: absolute;
   left: -7.5px;
   bottom: 0;
@@ -428,8 +430,8 @@ img {
   bottom: 0;
   padding: 1.5rem;
   width: 500px;
-  background: #FF5F1F;
-  color: #fff;
+  background: #f2f2f2;
+  color: #333;
   text-align: left;
 }
 
@@ -458,7 +460,7 @@ img {
 #about-b .time-line li:nth-child(odd) .pointer {
   left: -16px;
   border-width: 8px 16px 8px 0;
-  border-color: transparent #FF5F1F transparent transparent;
+  border-color: transparent #f2f2f2 transparent transparent;
 }
 
 #about-b .time-line li:nth-child(even) .timeline-div {
@@ -473,7 +475,34 @@ img {
 #about-b .time-line li:nth-child(even) .pointer {
   left: 500px;
   border-width: 8px 0 8px 16px;
-  border-color: transparent transparent transparent #FF5F1F;
+  border-color: transparent transparent transparent #f2f2f2;
+}
+
+#about-c .skills {
+  width: 100%;
+  padding: 2rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#about-c .skills div {
+  text-align: center;
+  margin: 0 1rem;
+  width: 33%;
+}
+
+#about-c .skills div h3 {
+  margin: 1.5rem 0;
+}
+
+#about-c .skills div h3:first-child {
+  margin: 0;
 }
 
 #about-c .bar {
@@ -547,10 +576,10 @@ img {
   -webkit-transform: translateY(-70%);
           transform: translateY(-70%);
   opacity: 0;
-  -webkit-transition: opacity 0.75s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  transition: opacity 0.75s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, opacity 0.75s ease-in-out;
-  transition: transform 0.5s ease-in-out, opacity 0.75s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: opacity 0.75s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.75s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, opacity 0.75s ease-in-out;
+  transition: transform 0.5s ease-in-out, opacity 0.75s ease-in-out, -webkit-transform 0.5s ease-in-out;
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
 }
@@ -700,12 +729,12 @@ img {
   #about-a .about-info .bio-image {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
-    grid-column: 1/span 2;
+    grid-column: 1 / span 2;
   }
   #about-a .about-info .bio {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
-    grid-column: 1/span 2;
+    grid-column: 1 / span 2;
   }
 }
 /*# sourceMappingURL=main.css.map */

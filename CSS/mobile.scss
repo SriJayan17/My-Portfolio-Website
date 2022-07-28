@@ -1,307 +1,305 @@
-@import 'config';
-@import 'utilities';
+@import "config";
+@import "utilities";
 // Home
 
-#main-header{
-    height: 50vh;
-    .header-content{
-        padding: 0 1rem;
-    }
+#main-header {
+  height: 50vh;
+  .header-content {
+    padding: 0 1rem;
+  }
 }
 
-#about{
-    &-b{
-        .time-line{
-            li{
-                height: 240px;
-                &:last-child,
-                &:nth-child(4){
-                    height: 330px;
-                }
-                .timeline-div{
-                    width: 300px;
-                    padding: 1rem;
-                }
-                &:nth-child(odd) .timeline-div{
-                    border-radius: 0;
-                }
-                &:nth-child(even) {
-                    .timeline-div{
-                        left: -336px;
-                        border-radius: 0;
-                    }
-                    .pointer{
-                        left: 100%;
-                    }
-                }
-            }
-        } 
-    }
-}
-#main-footer{
-    .footer-container{
-        .social{
-            a{
-                .fab{
-                    margin: 0 16px;
-                }
-            }
+#about {
+  &-b {
+    .time-line {
+      li {
+        height: 240px;
+        &:last-child,
+        &:nth-child(4) {
+          height: 330px;
         }
+        .timeline-div {
+          width: 300px;
+          padding: 1rem;
+        }
+        &:nth-child(odd) .timeline-div {
+          border-radius: 0;
+        }
+        &:nth-child(even) {
+          .timeline-div {
+            left: -336px;
+            border-radius: 0;
+          }
+          .pointer {
+            left: 100%;
+          }
+        }
+      }
     }
+  }
+}
+#main-footer {
+  .footer-container {
+    .social {
+      a {
+        .fab {
+          margin: 0 16px;
+        }
+      }
+    }
+  }
 }
 
 // Smart Phones
 
-@media(max-width:500px){
-    #main-navbar{
-        padding: 0;
+@media (max-width: 500px) {
+  #main-navbar {
+    padding: 0;
+    display: block;
+
+    .hamburger {
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .line {
+        position: relative;
         display: block;
+        height: 2px;
+        width: 2rem;
+        background: $main-color;
+        transition: transform 0.25s ease-in-out;
 
-        .hamburger{
-            height: 50px;
-            width: 50px;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            .line{
-                position: relative;
-                display: block;
-                height: 2px;
-                width: 2rem;
-                background: $main-color;
-                transition: transform 0.25s ease-in-out;
-
-                &::after{
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    top: -10px;
-                    background: inherit;
-                    height: 2px;
-                    width: 2rem;
-                }
-                &::before{
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    top: 10px;
-                    background: inherit;
-                    height: 2px;
-                    width: 2rem;
-                }
-            }
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: -10px;
+          background: inherit;
+          height: 2px;
+          width: 2rem;
         }
-
-        .logo{
-            display: block;
-            margin: auto;
-            line-height: 0;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 10px;
+          background: inherit;
+          height: 2px;
+          width: 2rem;
         }
-        ul{
-            position: absolute;
-            top: 70px;
-            left: 0;
-            transform: translateX(-100vw);
-            height: calc(100vh - 70px);
-            width: 100vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: #ff5f1fe5;
-            transition: transform 0.5s ease-in-out;
-            z-index: 2;
-            overflow: hidden;
-            li{
-                margin: 2rem auto;
-
-                a{
-                    color: #fff;
-                }
-
-                &:first-child{
-                    margin-top: 0;
-                }
-            }
-        }
-
-        #side-menu:checked ~ ul{
-            transform: translateX(0);
-        }
-
-        #side-menu:checked + .hamburger{
-            .line{
-                transform: rotate(135deg);
-                &::after,&::before{
-                    top: 0px;
-                    transform: rotate(90deg);                    
-                }
-            }
-        }
+      }
     }
 
-    #main-header{
-        display: none;
+    .logo {
+      display: block;
+      margin: auto;
+      line-height: 0;
     }
+    ul {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      transform: translateX(-100vw);
+      height: calc(100vh - 70px);
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #ff5f1fe5;
+      transition: transform 0.5s ease-in-out;
+      z-index: 2;
+      overflow: hidden;
+      li {
+        margin: 2rem auto;
 
-    // Stacking
-
-    #home-a .skills,
-    #home-b .stat,
-    #home-c .interest,
-    #about-a .about-info,
-    #projects-a .project-list,
-    #projects-b .links,
-    #contact-b .contact-info
-    {
-        grid-template-columns: 1fr;
-
-    }
-
-    #home{
-        &-a{
-            .skills{
-                div{
-                    padding-bottom: 1rem;
-                    border-bottom: 2px dotted #ccc;
-                    border-bottom-width: 90%;
-    
-                    &:last-child{
-                        border: none;
-                        padding-bottom: 0;
-                    }
-                }
-            }
+        a {
+          color: #fff;
         }
 
-        &-c{
-            .interest{
-                div{
-                    padding-bottom: 1rem;
-                    border-bottom: 2px dotted #ccc;
-    
-                    &:last-child{
-                        border: none;
-                        padding-bottom: 0;
-                    }
-                }
-            }
+        &:first-child {
+          margin-top: 0;
         }
+      }
     }
 
-    #about{
-        &-a{
-            .about-info{
-                .bio-image{
-                    height: 300px;
-                    width: 100%;
-                }
-            }
-        }
-        &-b{
-            .time-line{
-                li{
-                    height: 290px;
-                    margin: 0;
-                    &:nth-child(4),
-                    &:last-child{
-                        height: 400px;
-                    }
-                    .timeline-div{
-                        width: calc(100vw - 110px);
-                    }
-                    &:nth-child(even){
-                        .timeline-div{
-                            left: 40px;
-                        }
-                        .pointer{
-                            left: -16px;
-                            border-width: 8px 16px 8px 0;
-                            border-color: transparent $secondary-color transparent transparent;
-                        }
-                    }
-                }
-            }
-        }
+    #side-menu:checked ~ ul {
+      transform: translateX(0);
     }
 
-    #projects{
-        &-a{
-            .project-list{
-                .project-image{
-
-                    img{
-                        height: 200px;
-                    }
-                }
-            }
+    #side-menu:checked + .hamburger {
+      .line {
+        transform: rotate(135deg);
+        &::after,
+        &::before {
+          top: 0px;
+          transform: rotate(90deg);
         }
+      }
+    }
+  }
+
+  #main-header {
+    display: none;
+  }
+
+  // Stacking
+
+  #home-a .skills,
+  #home-b .stat,
+  #home-c .interest,
+  #about-a .about-info,
+  #projects-a .project-list,
+  #projects-b .links,
+  #contact-b .contact-info {
+    grid-template-columns: 1fr;
+  }
+
+  #home {
+    &-a {
+      .skills {
+        div {
+          padding-bottom: 1rem;
+          border-bottom: 2px dotted #ccc;
+          border-bottom-width: 90%;
+
+          &:last-child {
+            border: none;
+            padding-bottom: 0;
+          }
+        }
+      }
     }
 
-    #contact{
-        &-b{
-            padding: 2rem 0;
-            .contact-info{
-                div{
-                    padding-bottom: 1rem;
-                    border-bottom: 2px dotted #ccc;
+    &-c {
+      .interest {
+        div {
+          padding-bottom: 1rem;
+          border-bottom: 2px dotted #ccc;
 
-                    &:last-child{
-                        border: none;
-                        padding-bottom: 0;
-                    }
-                }
-                border-bottom: 1px solid #ccc;
-            }
+          &:last-child {
+            border: none;
+            padding-bottom: 0;
+          }
         }
+      }
     }
+  }
 
-    #main-footer{
-        .footer-container{
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            *{
-                padding: 0.45rem 0;
-            }
+  #about {
+    &-a {
+      .about-info {
+        .bio-image {
+          height: 300px;
+          width: 100%;
         }
+      }
     }
+    &-b {
+      .time-line {
+        li {
+          height: 290px;
+          margin: 0;
+          &:nth-child(4),
+          &:last-child {
+            height: 400px;
+          }
+          .timeline-div {
+            width: calc(100vw - 110px);
+          }
+          &:nth-child(even) {
+            .timeline-div {
+              left: 40px;
+            }
+            .pointer {
+              left: -16px;
+              border-width: 8px 16px 8px 0;
+              border-color: transparent $secondary-color transparent transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #projects {
+    &-a {
+      .project-list {
+        .project-image {
+          img {
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+
+  #contact {
+    &-b {
+      padding: 2rem 0;
+      .contact-info {
+        div {
+          padding-bottom: 1rem;
+          border-bottom: 2px dotted #ccc;
+
+          &:last-child {
+            border: none;
+            padding-bottom: 0;
+          }
+        }
+        border-bottom: 1px solid #ccc;
+      }
+    }
+  }
+
+  #main-footer {
+    .footer-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      * {
+        padding: 0.45rem 0;
+      }
+    }
+  }
 }
 
 // Landscape
 
-@media(max-height:430px){
+@media (max-height: 430px) {
+  .l-heading {
+    font-size: 2rem;
+    line-height: 1;
+  }
 
-    .l-heading{
-        font-size: 2rem;
-        line-height: 1;
+  #main-header {
+    height: 75vh;
+  }
+
+  #home {
+    &-a,
+    &-c {
+      padding: 0 1rem;
     }
+  }
 
-    #main-header{
-        height: 75vh;
-    }
-
-    #home{
-        &-a,&-c{
-            padding: 0 1rem;
+  #about {
+    &-a {
+      .about-info {
+        .bio-image {
+          grid-column: 1 / span 2;
         }
-    }
-
-    #about{
-        &-a{
-            .about-info{
-                .bio-image{
-                    grid-column: 1/span 2;
-                }
-                .bio{
-                    grid-column: 1/span 2;
-                }
-            }
+        .bio {
+          grid-column: 1 / span 2;
         }
+      }
     }
+  }
 }

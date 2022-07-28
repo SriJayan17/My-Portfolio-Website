@@ -36,12 +36,12 @@
 }
 
 .btn-primary:hover {
-  background: #FF5F1F;
+  background: #ff5f1f;
   color: #fff;
 }
 
 .btn-secondary {
-  background: #FF5F1F;
+  background: #ff5f1f;
   color: #fff;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .btn-light:hover {
-  background: #FF5F1F;
+  background: #ff5f1f;
   color: #fff;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .btn-dark:hover {
-  background: #FF5F1F;
+  background: #ff5f1f;
   color: #fff;
 }
 
@@ -85,7 +85,7 @@
   height: 0.25rem;
   width: 4rem;
   margin: auto;
-  background: #FF5F1F;
+  background: #ff5f1f;
   margin-bottom: 1rem;
 }
 
@@ -155,7 +155,7 @@
 }
 
 .bg-secondary {
-  background: #FF5F1F;
+  background: #ff5f1f;
   color: #fff;
 }
 
@@ -244,7 +244,7 @@
     transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
   }
   #main-navbar .hamburger .line::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: -10px;
@@ -253,7 +253,7 @@
     width: 2rem;
   }
   #main-navbar .hamburger .line::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 10px;
@@ -267,7 +267,7 @@
     line-height: 0;
   }
   #main-navbar ul {
-    position: absolute;
+    position: fixed;
     top: 70px;
     left: 0;
     -webkit-transform: translateX(-100vw);
@@ -367,7 +367,7 @@
   #about-b .time-line li:nth-child(even) .pointer {
     left: -16px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent #FF5F1F transparent transparent;
+    border-color: transparent #ff5f1f transparent transparent;
   }
   #projects-a .project-list .project-image img {
     height: 200px;
@@ -417,12 +417,12 @@
   #about-a .about-info .bio-image {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
-    grid-column: 1/span 2;
+    grid-column: 1 / span 2;
   }
   #about-a .about-info .bio {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
-    grid-column: 1/span 2;
+    grid-column: 1 / span 2;
   }
 }
 /*# sourceMappingURL=mobile.css.map */
